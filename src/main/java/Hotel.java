@@ -33,6 +33,16 @@ public class Hotel {
     }
 
     public void addGuestToRoomInHotel(Guest guest, Room room){
-        this.bedrooms.add(room.addAGuest(guest));
+        room.addAGuest(guest);
     }
+
+    public ArrayList<Guest> getHotelGuestListByRoom(Room room){
+        for (int i = 0; i < bedrooms.size(); i++) {
+            if (bedrooms.get(i) == room){
+                return room.getGuestsByRoom();
+            }
+        }
+        return null;
+    }
+
 }

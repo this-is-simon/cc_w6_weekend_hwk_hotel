@@ -21,4 +21,8 @@ public abstract class Room {
         occupants.add(guest);
     }
 
+    public ArrayList<Guest> getGuestsByRoom(){
+        return occupants;
+    }
 }
+
