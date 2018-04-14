@@ -27,4 +27,12 @@ public class Hotel {
     public void addGuest(Guest guest){
         guestList.add(guest);
     }
+
+    public void removeGuest(Guest guest){
+        if (guestList.size() > 0) {guestList.remove(guest);}
+    }
+
+    public void addGuestToRoomInHotel(Guest guest, Room room){
+        this.bedrooms.add(room.addAGuest(guest));
+    }
 }

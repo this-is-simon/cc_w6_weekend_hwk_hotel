@@ -14,6 +14,8 @@ public class HotelTest {
     Bedroom bedroom3;
     ArrayList<Guest> guestList;
     Guest guest1;
+    Guest guest2;
+    Guest guest3;
 
 
     @Before
@@ -30,10 +32,8 @@ public class HotelTest {
         hotel1 = new Hotel("Hotel Paradiso", bedrooms);
 
         guest1 = new Guest("Simon");
-
-//        guestList = new ArrayList<>();
-//
-//        guestList.add(guest1);
+        guest2 = new Guest("Chairman Mao");
+        guest3 = new Guest("Aileen");
 
     }
 
@@ -55,6 +55,14 @@ public class HotelTest {
     @Test
     public void canAddGuest(){
         hotel1.addGuest(guest1);
+        assertEquals(1, hotel1.countGuests());
+    }
+
+    @Test
+    public void canRemoveGuest(){
+        hotel1.addGuest(guest1);
+        hotel1.addGuest(guest2);
+        hotel1.removeGuest(guest1);
         assertEquals(1, hotel1.countGuests());
     }
 

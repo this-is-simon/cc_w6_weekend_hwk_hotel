@@ -17,4 +17,8 @@ public abstract class Room {
         return occupants.size();
     }
 
+    public void addAGuest(Guest guest){
+        occupants.add(guest);
+    }
+
 }
