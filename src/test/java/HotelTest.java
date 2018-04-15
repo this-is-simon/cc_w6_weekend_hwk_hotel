@@ -72,12 +72,14 @@ public class HotelTest {
         assertEquals(1, bedroom1.numberOfGuests());
     }
 
+    //Is this a legitimate test?
     @Test
     public void canGetHotelGuestListByRoom(){
         bedroom1.addAGuest(guest1);
 //        hotel1.addGuestToRoomInHotel(guest1, bedroom1);
         assertEquals(bedroom1.getGuestsByRoom(), hotel1.getHotelGuestListByRoom(bedroom1));
     }
+    //----
 
     @Test
     public void canGetGuestList(){
